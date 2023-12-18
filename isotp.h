@@ -1,14 +1,7 @@
 #ifndef __ISOTP_H__
 #define __ISOTP_H__
 
-#include <stdio.h>
-#include <string.h>
-
-#ifdef __cplusplus
 #include <stdint.h>
-
-extern "C" {
-#endif
 
 #include "isotp_defines.h"
 #include "isotp_config.h"
@@ -121,10 +114,6 @@ int isotp_send_with_id(IsoTpLink *link, uint32_t id, const uint8_t payload[], ui
  *      - @link ISOTP_RET_NO_DATA @endlink
  */
 int isotp_receive(IsoTpLink *link, uint8_t *payload, const uint16_t payload_size, uint16_t *out_size);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // __ISOTP_H__
 
